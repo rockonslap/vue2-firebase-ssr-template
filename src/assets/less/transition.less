@@ -1,0 +1,32 @@
+.list-enter-active,
+.list-leave-active {
+  transition: all .5s;
+}
+
+.list-enter,
+.list-leave-to {
+  opacity: 0;
+  transform: translateY(-10px);
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity .5s ease;
+}
+
+.fade-enter,
+.fade-leave-active {
+  opacity: 0;
+}
+
+.slide-left-enter,
+.slide-right-leave-active {
+  transition: all .5s ease;
+  transform: translate3d(-100%, 0, 0);
+}
+
+.slide-left-leave-active,
+.slide-right-enter {
+  transition: all .5s ease;
+  transform: translate3d(100%, 0, 0);
+}

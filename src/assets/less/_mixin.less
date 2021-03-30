@@ -1,0 +1,53 @@
+.clearfix() {
+  &:before,
+  &:after {
+    content: '';
+    display: table;
+  }
+
+  &:after {
+    clear: both;
+  }
+}
+
+.clearfix-after() {
+  clear: both;
+}
+
+.transition(@prop: all, @time: 200ms, @ease: ease-out) {
+  -moz-transition: @prop @time @ease;
+  -webkit-transition: @prop @time @ease;
+  transition: @prop @time @ease;
+}
+
+
+.placeholder(@color) {
+  &::-webkit-input-placeholder {
+    color: @color;
+  }
+
+  &:-moz-placeholder {
+    color: @color;
+  }
+
+  &::-moz-placeholder {
+    color: @color;
+  }
+
+  &:-ms-input-placeholder {
+    color: @color;
+  }
+}
+
+.container() {
+  margin: 0 auto;
+
+  @media @md-min {
+    width: 970px;
+    padding: 0 15px;
+  }
+
+  @media @lg-min {
+    width: 1170px;
+  }
+}
